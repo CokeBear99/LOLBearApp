@@ -1,0 +1,129 @@
+﻿<UserControl x:Class="LOLBearApp.SettingPannel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+             mc:Ignorable="d" Height="770" Width="1450" Background="Transparent">
+
+
+    <Grid Background="#FF1E1D1D">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="170"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+        </Grid.RowDefinitions>
+
+        <!-- SETTING LOGO -->
+
+        <StackPanel Grid.Row="0" Orientation="Vertical" Margin="0 0 0 0">
+
+            <Border Width="500" Height="100" Margin="0 15 0 10" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <fa:IconImage Icon="Cog" Width="100" Height="80" Foreground="#FF667B88" Margin="40 10 0 0"/>
+                    <TextBlock Text="SETTING" FontSize="70" FontWeight="UltraBold" Foreground="#FF748F97" Margin="10 5 0 0"/>
+
+                </StackPanel>
+            </Border>
+
+            <Rectangle Height="4" Width="500" Margin="0 10 0 0">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="#FF978984" Opacity="0.4"/>
+                </Rectangle.Fill>
+            </Rectangle>
+
+        </StackPanel>
+
+        <!-- 버튼 -->
+
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" >
+
+
+            <!-- 계정 추가 버튼-->
+            <Border Width="250" Height="150" BorderThickness="15" Margin="100 0 100 0" >
+                <Border.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF161616" Offset="0.093"/>
+                        <GradientStop Color="#FF161616" Offset="0.964"/>
+                        <GradientStop Color="#FF181414" Offset="0.368"/>
+                        <GradientStop Color="#FF2E2D2D" Offset="0.65"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+
+                <Button Style="{StaticResource ButtonFocus}" BorderThickness="1" BorderBrush="#FF131313" x:Name="AddAccountBT" Click="AddAccountBT_Click">
+                    <StackPanel>
+                        <TextBlock Text="계정 추가"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="SemiBold" Foreground="#FF8E8E8E" Margin="0 5 0 0" />
+                        <Rectangle Height="5" Margin="0 10 0 0">
+                            <Rectangle.Fill>
+                                <SolidColorBrush Color="#FF111313" Opacity="0.5"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </StackPanel>
+                </Button>
+
+            </Border>
+
+
+
+            <!-- 정보 수정 버튼-->
+            <Border Width="250" Height="150" BorderThickness="15" Margin="100 0 100 0" >
+                <Border.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF161616" Offset="0.093"/>
+                        <GradientStop Color="#FF161616" Offset="0.964"/>
+                        <GradientStop Color="#FF181414" Offset="0.368"/>
+                        <GradientStop Color="#FF2E2D2D" Offset="0.65"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+
+                <Button Style="{StaticResource ButtonFocus}" BorderThickness="1" BorderBrush="#FF131313">
+                    <StackPanel>
+                        <TextBlock Text="정보 수정"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="SemiBold" Foreground="#FF8E8E8E" Margin="0 5 0 0" />
+                        <Rectangle Height="5" Margin="0 10 0 0">
+                            <Rectangle.Fill>
+                                <SolidColorBrush Color="#FF111313" Opacity="0.5"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </StackPanel>
+                </Button>
+
+            </Border>
+
+
+
+            <!-- 전적 최신화 버튼-->
+            <Border Width="250" Height="150" BorderThickness="15" Margin="100 0 100 0" >
+                <Border.BorderBrush>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF161616" Offset="0.093"/>
+                        <GradientStop Color="#FF161616" Offset="0.964"/>
+                        <GradientStop Color="#FF181414" Offset="0.368"/>
+                        <GradientStop Color="#FF2E2D2D" Offset="0.65"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+
+                <Button Style="{StaticResource ButtonFocus}" BorderThickness="1" BorderBrush="#FF131313">
+                    <StackPanel>
+                        <TextBlock Text="전적 업데이트"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="SemiBold" Foreground="#FF8E8E8E" Margin="0 5 0 0" />
+                        <Rectangle Height="5" Margin="0 10 0 0">
+                            <Rectangle.Fill>
+                                <SolidColorBrush Color="#FF111313" Opacity="0.5"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </StackPanel>
+                </Button>
+
+            </Border>
+
+
+        </StackPanel>
+
+
+
+
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,85 @@
+﻿<UserControl x:Class="LOLBearApp.InputPannel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+             mc:Ignorable="d" Height="300" Width="520">
+
+    <Grid Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- 창 닫기 / 최소화 -->
+        <Border Grid.Row="0" CornerRadius="10 10 0 0"  Background="#FF161515" >
+            <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 0 8 0" >
+                <!-- 최소화 버튼-->
+                <Button BorderBrush="{x:Null}" Style="{StaticResource ButtonFocus}" Click="Minimized_Click">
+                    <fa:IconImage Icon="Minus" Style="{StaticResource SetIcon}" Foreground="#ffffff"/>
+                </Button>
+                <!-- 창닫기 버튼-->
+                <Button BorderBrush="{x:Null}" Style="{StaticResource ButtonFocus}" x:Name="CloseButton" Click="CloseButton_Click">
+                    <fa:IconImage Icon="Xmark" Style="{StaticResource SetIcon}" Foreground="White"/>
+                </Button>
+            </StackPanel>
+        </Border>
+        
+        
+
+        <!-- 메인 공간 -->
+        <Border Grid.Row="1" CornerRadius="0 0 10 10" Margin="0 -0.2 0 0" Background="#FF272A38">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" >
+                    <TextBlock Text="닉네임#태그" FontSize="20" FontWeight="Medium" Foreground="#FFAEBFD4" VerticalAlignment="Center" Margin="20 0 0 0" />
+                    <TextBox x:Name="NickNameInputBox" Height="40" Width="200" Margin="20 0 0 0" BorderBrush="Black" FontSize="20" FontWeight="Light" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                        <TextBox.Background>
+                            <SolidColorBrush Color="#FF323030" Opacity="0.5"/>
+                        </TextBox.Background>
+                    </TextBox>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Orientation="Horizontal" VerticalAlignment="Center" >
+                    <TextBlock Text="ID" FontSize="20" FontWeight="Medium" Foreground="#FFAEBFD4" VerticalAlignment="Center" Margin="60 0 0 0" />
+                    <TextBox x:Name="IDInputBox" Height="40" Width="200" Margin="73 0 0 0" BorderBrush="Black" FontSize="20" FontWeight="Light" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  >
+                        <TextBox.Background>
+                            <SolidColorBrush Color="#FF323030" Opacity="0.5"/>
+                        </TextBox.Background>
+                    </TextBox>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center" >
+                    <TextBlock Text="PASSWORD" FontSize="20" FontWeight="Medium" Foreground="#FFAEBFD4" VerticalAlignment="Center" Margin="20 0 0 0" />
+                    <TextBox x:Name="PWInputBox" Height="40" Width="200" Margin="25 0 0 0" BorderBrush="Black" FontSize="20" FontWeight="Light" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  >
+                        <TextBox.Background>
+                            <SolidColorBrush Color="#FF323030" Opacity="0.5"/>
+                        </TextBox.Background>
+                    </TextBox>
+                </StackPanel>
+
+
+
+
+                <Button x:Name="AddCheckBT" Style="{StaticResource ButtonFocus}" BorderBrush="{x:Null}" Width="60" Height="60" Grid.Row="1" Margin="360 0 0 0"  Click="AddCheckBT_Click" >
+
+                    <fa:IconImage Icon="SquareCheck" OpacityMask="Black">
+                        <fa:IconImage.Foreground>
+                            <SolidColorBrush Color="#FF100F0F" Opacity="0.7"/>
+                        </fa:IconImage.Foreground>
+                    </fa:IconImage>
+
+                </Button>
+
+
+            </Grid>
+        </Border>
+
+    </Grid>
+</UserControl>

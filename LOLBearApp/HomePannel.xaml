@@ -1,0 +1,119 @@
+﻿<UserControl x:Class="LOLBearApp.HomePannel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+             mc:Ignorable="d" Height="770" Width="1450" Background="Transparent">
+
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="\image\DarkUi.png"/>
+        </Grid.Background>
+
+        <!-- 첫 번째 행 -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="318*" />
+            <RowDefinition Height="127*" />
+            <RowDefinition Height="65*" />
+            <RowDefinition Height="261*" />
+        </Grid.RowDefinitions>
+
+        <!-- 첫 번째 열 -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="320*" />
+            <ColumnDefinition Width="111*"/>
+            <ColumnDefinition Width="294*" />
+        </Grid.ColumnDefinitions>
+
+
+
+
+
+
+
+        <Viewbox Grid.Row="0" Grid.Column="2"  Margin="20,50,70,126" Grid.RowSpan="2" >
+            <TextBlock x:Name="currentTimeTextBlock" Text="{Binding CurrentTime}"
+               FontWeight="SemiBold"
+               Foreground="White"/>
+        </Viewbox>
+
+
+        <Viewbox Grid.Column="2" Margin="117,278,75,108" Grid.RowSpan="2" >
+            <TextBlock x:Name="currentDateTextBlock" Text="{Binding CurrentDate}" 
+               FontWeight="SemiBold"
+               Foreground="White"/>
+        </Viewbox>
+
+
+
+        <Viewbox  Margin="200,50,50,50" Grid.Column="2" Grid.Row="3">
+            <TextBlock x:Name="RamUsage" 
+           HorizontalAlignment="Left" VerticalAlignment="Bottom"
+           Foreground="White" FontWeight="SemiBold"/>
+
+        </Viewbox>
+
+
+
+
+
+
+        <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0 15 0 40">
+            <!-- 아이콘을 표시하는 Viewbox -->
+            <Viewbox Width="70" Height="60" Margin="0 0 0 5">
+                <fa:IconImage Icon="LocationDot" Style="{StaticResource MenuIcon}" Foreground="#FFFFFF"  />
+            </Viewbox>
+
+            <!-- 텍스트를 표시하는 Viewbox -->
+            <Viewbox Width="350" Height="70" Margin="20 0 0 0" >
+                <TextBlock x:Name="LocationTextBlock" 
+                   Foreground="White" FontWeight="SemiBold"/>
+            </Viewbox>
+        </StackPanel>
+
+
+        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Width="400" Height="100"  Margin="0 10 0 240">
+
+            <Viewbox Margin="10 0 0 0" Width="250" Height="50">
+                <TextBlock x:Name="WeatherTextBlock" 
+                 Foreground="White" FontWeight="SemiBold"/>
+            </Viewbox>
+
+            <Viewbox Margin="30 0 0 0" Width="100" Height="70">
+                <TextBlock x:Name="TemperatureTextBlock" 
+                Foreground="White" FontWeight="SemiBold"/>
+            </Viewbox>
+
+        </StackPanel>
+
+
+
+        <!--그림 패널-->
+        <StackPanel Grid.Row="0" Grid.Column="0" Width="400" Height="200" Margin="0 30 0 0" Background="Transparent">
+            <Viewbox Height="160" Width="200" Margin="0 20 0 0">
+                <Image x:Name="WeatherIconImage" Width="100" Height="100" />
+            </Viewbox>
+        </StackPanel>
+
+        <Border  Grid.Column="0" Grid.Row="0" BorderBrush="#B3070713" BorderThickness="2" CornerRadius="5" Margin="70,21,70,10" Opacity="0.85" Grid.RowSpan="2"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+
+
+
+
+</UserControl>

@@ -1,0 +1,160 @@
+﻿<Window x:Class="LOLBearApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:fa="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+        mc:Ignorable="d" Height="820" Width="1520" WindowStartupLocation="CenterScreen"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"  >
+    <!--Row1 colum1 = Height=770 / Width= 1450-->
+
+
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--Top Bar-->
+        <Border Grid.Row="0" CornerRadius="10 10 0 0" MouseDown="Border_MouseDown" Background="#FF161515">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="0 10 0 0">
+                    <Image Source="image\Rog_icon.png" Width="60" Height="auto" Margin="3 0 0 5"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="LoL Account Tool" Foreground="#FF494444" FontSize="20" FontWeight="SemiBold"
+                           TextAlignment="Center" Margin="-10 13 0 0" Width="200"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10 10 10 10">
+
+                    <Button BorderBrush="{x:Null}" Style="{StaticResource ButtonFocus}" Click="Minimized_Click">
+                        <fa:IconImage Icon="Minus" Style="{StaticResource SetIcon}" Foreground="#ffffff"/>
+                    </Button>
+
+                    <Button BorderBrush="{x:Null}" Style="{StaticResource ButtonFocus}" Click="Maxmized_Click">
+                        <fa:IconImage Icon="Square" Style="{StaticResource SetIcon}" Foreground="#ffffff"/>
+                    </Button>
+
+                    <Button BorderBrush="{x:Null}" Style="{StaticResource ButtonFocus}" Click="TrayButton_Click" >
+                        <fa:IconImage Icon="Xmark" Style="{StaticResource SetIcon}" Foreground="White"/>
+                    </Button>
+
+                </StackPanel>
+
+
+            </Grid>
+
+
+        </Border>
+
+
+        <!--Main + Left bar-->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <!--Left Bar-->
+            <Border Grid.Column="0" CornerRadius="0 0 0 10" Background="#FF161515" Margin="0 -0.2 0 0">
+                <Grid>
+                    <StackPanel Orientation="Vertical">
+
+
+                        <Button Style="{StaticResource ButtonFocus}" Margin="0 20 0 12" Click="HomeBT_Click" >
+                            <fa:IconImage Icon="HomeAlt" Style="{StaticResource MenuIcon}" Foreground="#FF494444"/>
+                        </Button>
+
+                        <Button BorderBrush="{x:Null}" Style="{StaticResource ButtonFocus}"   Margin="0 10 0 12"  Click="IronBT_Click">
+                            <Image Source="image\Iron.png" Width="60" Height="50" Margin="0 0 0 0"/>
+                        </Button>
+
+
+                        <Button BorderBrush="{x:Null}" Style="{StaticResource ButtonFocus}" Margin="0 10 0 12"   Click="BronzeBT_Click" >
+                            <Image Source="image\Bronze.png" Width="60" Height="50" Margin="0 0 0 0"/>
+                        </Button>
+
+                        <Button BorderBrush="{x:Null}" Style="{StaticResource ButtonFocus}" Margin="0 10 0 12"  Click="SilverBT_Click">
+                            <Image Source="image\Silver.png" Width="60" Height="50" Margin="0 0 0 0"/>
+                        </Button>
+
+                        <Button BorderBrush="{x:Null}" Style="{StaticResource ButtonFocus}"  Margin="0 10 0 12"  Click="GoldBT_Click">
+                            <Image Source="image\Gold.png" Width="60" Height="50" Margin="0 0 0 0"/>
+                        </Button>
+
+                        <Button BorderBrush="{x:Null}" Style="{StaticResource ButtonFocus}"  Margin="0 10 0 12"  Click="PlatinumBT_Click">
+                            <Image Source="image\Platinum.png" Width="60" Height="50" Margin="0 0 0 0"/>
+                        </Button>
+
+                        <Button BorderBrush="{x:Null}" Style="{StaticResource ButtonFocus}"  Margin="0 10 0 12"  Click="EmeraldBT_Click">
+                            <Image Source="image\Emerald.png" Width="60" Height="50" Margin="0 0 0 0" />
+                        </Button>
+
+                        <Button BorderBrush="{x:Null}" Style="{StaticResource ButtonFocus}"  Margin="0 10 0 12"  Click="DiamondBT_Click">
+                            <Image Source="image\Diamond.png" Width="65" Height="50" Margin="0 0 0 0"/>
+                        </Button>
+
+
+                        <Rectangle Height="4" Fill="#FF1F2224" Margin="5 15 5 12"/>
+
+                        <Button Style="{StaticResource ButtonFocus}" BorderBrush="{x:Null}"  Margin="0 10 0 12"  Click="SettingBT_Click">
+                            <fa:IconImage Icon="Cogs" Style="{StaticResource MenuIcon}" Foreground="#FF494444"/>
+                        </Button>
+
+                        <Button Style="{StaticResource ButtonFocus}" BorderBrush="{x:Null}"  Click="LogoutButton_Click" Margin="0 10 0 0"  >
+                            <fa:IconImage Icon="PowerOff" Style="{StaticResource MenuIcon}" Foreground="#FF494444"/>
+                        </Button>
+
+                        <!-- 다른 요소 추가 -->
+
+                        <Rectangle Height="2" Fill="AliceBlue" Margin="0 550 0 0"/>
+
+                    </StackPanel>
+                </Grid>
+            </Border>
+
+
+            <!--Main Section-->
+            <Grid x:Name="MainSection" Grid.Column="1" Grid.Row="1" Margin="-0.1 -0.1 0 0" >
+                
+                
+            </Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </Grid>
+
+
+
+
+
+    </Grid>
+
+
+
+
+
+
+
+
+</Window>
